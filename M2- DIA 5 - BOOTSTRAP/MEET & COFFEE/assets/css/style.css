@@ -1,0 +1,132 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+/* -------NAVBAR-------------------------------------------------------------- */
+nav {
+  background-color: #000f08;
+  /* height: 80px; */
+  padding: 15px 100px 15px 100px;
+  display: flex; /* Por defecto trabaja en fila, pero puedo decidir que sea en columna */
+  justify-content: start; /* Trabajo sobre el eje principal */
+  align-items: center;
+  gap: 30px;
+  position: sticky;
+  top:0px
+}
+
+nav img {
+  width: 50px;
+  height: 50px;
+}
+
+nav a {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+/* -------HEADER-------------------------------------------------------------- */
+header {
+  background-image: url("../img/bg-hero.png"); /* Donde esta la imagen */
+  background-position: center; /* Posición */
+  background-repeat: no-repeat; /* Si se repite o no */
+  background-size: cover; /* Como se ajusta a su contenedor */
+  padding: 100px 15px 100px 0;
+  font-family: Open sans;
+  color: white;
+  text-align: right;
+  text-shadow: 0px 3px 6px black; /* Sombra de texto */
+}
+
+header h1 {
+  font-size: 60px;
+}
+
+header h3 {
+  color: white; /* color */
+  font-size: 40px; /* Tamaño */
+  font-weight: lighter; /* Grosor */
+}
+
+/* -------UBICACION-------------------------------------------------------------- */
+#Ubicacion {
+  padding: 100px 0 100px 0;
+  display: flex; /* Flex por defecto es ROW, si quiero en columna lo especifico*/
+  flex-direction: column; /* Como dispongo los elementos */
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+#Ubicacion img {
+  width: 500px;
+  height: 500px;
+}
+
+/* -------PROX CHARLA-------------------------------------------------------------- */
+#Proxima-Charla {
+  background: #a4452c;
+  padding: 100px;
+  color: white;
+}
+
+#Proxima-Charla .wrapper {
+  width: 800px;
+  margin: auto;
+}
+
+.wrapper img {
+  width: 25%;
+}
+
+.wrapper .texto {
+  width: 70%;
+  margin-left: 4%;
+}
+
+.wrapper img,
+.texto {
+  display: inline-block;
+  vertical-align: middle;
+}
+/*------------------ EVENTOS ANTERIORES----------------------------------------------- */
+#Eventos-Anteriores {
+  padding: 100px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Eventos-Anteriores img {
+  height: 250px;
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+#events-container {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.event-card {
+  text-align: center;
+}
+
+/* -------FOOTER-------------------------------------------------------------- */
+
+footer {
+  font-family: "Open Sans", sans-serif;
+  text-align: center; /* Centrar textos hijos */
+  background: #000f08;
+  color: white;
+  padding: 50px;
+}
+
+i {
+  font-size: 50px; /* Asi para cambiar el tamaño de iconos */
+  margin: 10px;
+}

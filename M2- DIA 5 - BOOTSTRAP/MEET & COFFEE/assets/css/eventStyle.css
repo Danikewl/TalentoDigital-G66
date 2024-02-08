@@ -1,0 +1,15 @@
+main {
+  padding: 100px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    font-size: 1.2rem;
+    width: 45%;
+}

@@ -1,0 +1,20 @@
+body {
+  background-color: black;
+  color: white;
+  background-image: url("../img/background-body.avif");/* imagen de fondo */
+}
+
+nav {
+  height: 70px; /* Alto */
+  background-color: gray;
+}
+
+#logo-empresa {
+  width: 50px; /* Ancho */
+  height: 50px; /* Alto */
+}
+
+main {
+  height: 250px;
+
+}

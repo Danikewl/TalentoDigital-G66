@@ -1,0 +1,31 @@
+body {
+  margin: 0; /* Ya lo explico */
+  background-color: bisque;
+  background-image: url("../img/heladoEnMano.avif");
+  background-repeat: no-repeat; /* Indica si la imagen, de no cubrir completamente el fondo, se
+    repetirá o no y en qué posición. 
+    */
+  background-position: center; /*Indica la posición del elemento en relación al fondo.*/
+
+  background-size: contain; /*  Define el tamaño de la imágen que se utilizará como fondo en el
+  elemento aplicado. "cover o contain"*/
+  background-attachment: fixed; /* Indica como se comporta este fondo, queda fijo? o se adapta al contenido? */
+}
+
+header {
+  background-color: red;
+}
+
+nav {
+  background-color: bisque;
+}
+
+#articuloImg {
+  background-color: black;
+  width: 200px;
+  height: 200px;
+  object-fit: contain; /* Como se ajusta la imagen en su contenedor */
+}
+p {
+  text-align: center;
+}

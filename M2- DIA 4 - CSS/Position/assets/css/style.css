@@ -1,0 +1,67 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  font-size: 25px;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  /* background-color: blue; */
+}
+
+nav {
+  position: sticky; /* Se queda fija en pantalla */
+  top:0px; /* 📛💯🔆🔆ESTO ME FALTÓ RECIEN EN EL STICKY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+  z-index: 30; /* Darle profundidad en pantalla */
+  height: 20%;
+  width: 100%;
+  background-color: chocolate;
+}
+
+#div-1 {
+  /* position absolute sin un padre relativo=> modificamos las propiedades top/bottom/left/right */
+  position: absolute;
+  bottom: 5px;
+  /* --------------------------------------- */
+
+  margin: 5px;
+  height: 250px;
+  width: 250px;
+  background-color: red;
+}
+
+#div-2 {
+  /* position relative=> el hijo absoluto va a moverse dentro de este div */
+  /* El elemento es posicionado de acuerdo al flujo normal del documento, y luego es desplazado con relación a sí mismo, */
+  position: relative;
+  top:500px;
+  /* --------------- */
+  margin: 5px;
+  height: 250px;
+  width: 250px;
+  background-color: green;
+}
+
+#hijo-2 {
+  /* position absolute=> en relación a su padre relativo */
+  position: absolute;
+  top:25px;
+  /* -------------------------------------------------- */
+  /* --------------------------------------------------- */
+  height: 50%;
+  width: 50%;
+  background-color: cyan;
+}
+
+#div-3 {
+  /* position */
+
+  /*  */
+  margin: 5px;
+  height: 250px;
+  width: 250px;
+  background-color: yellow;
+}

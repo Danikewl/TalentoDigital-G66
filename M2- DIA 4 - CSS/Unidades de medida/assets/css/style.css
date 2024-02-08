@@ -1,0 +1,37 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+body {
+  height: 100vh; /* viewport height => total de alto pantalla */
+  width: 100vw; /* viewport height => total de ancho pantalla */
+  background-color: blue;
+}
+
+#div-1 {
+  height: 50%; /* Porcentaje => en relación al padre  */
+  width: 50%; /* Porcentaje => en relación al padre  */
+  background-color: red;
+}
+
+#div-2 {
+  height: 250px;
+  width: 250px;
+  background-color: green;
+}
+
+#hijo-2 {
+  height: 50%; /* Porcentaje => en relación al padre  */
+  width: 50%; /* Porcentaje => en relación al padre  */
+  background-color: cyan;
+}
+
+#div-3 {
+  /* em => de padre a hijo se envia la medida de referencia*/
+  /* rem => su medida estandar en HTML5 son 16px, al menos que sea configurada por nosotros */
+  height: 250px;
+  width: 250px;
+  background-color: yellow;
+}

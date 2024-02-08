@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Estilos propios-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- JQUERY CDN -->
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script> -->
+
+    <!-- Script propio -->
+    <script defer src="./assets/js/index.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body class="">
+    <p>Si me clickeas dos veces, desapareceré.</p>
+    <p>¡Yo también!</p>
+    <p>¡Yo también!</p>
+
+    <span>click</span>
+    <span>click</span>
+    <span>click</span>
+
+    <!-- JQUERY CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("p").dblclick(function () {
+          $(this).hide("slow");
+        });
+
+        $("p").click(function () {
+          $(this).css({
+            color: "blue",
+            "font-size": "2em",
+          });
+        });
+
+        $("p").hover(function () {
+          $(this).html("<a href='#'>Me convertí</a>");
+        });
+
+        $("span").click(function () {
+          $(this).hide();
+        });
+      });
+    </script>
+  </body>
+</html>

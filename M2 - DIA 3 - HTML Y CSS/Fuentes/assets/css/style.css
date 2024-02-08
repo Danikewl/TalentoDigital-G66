@@ -1,0 +1,30 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif; /* Tipo de fuente "Familia" importada de google fonts */
+  font-size: 14px; /* Tamaño */
+  font-weight: 300; /* Grosor */
+  background-color: #8DF1DD;
+}
+
+h1 {
+  font-family:'Courier New', Courier, monospace; /* por defecto */
+  font-size: 25px; /* Tamaño */
+  font-weight: 300; /* Grosor */
+  font-style: italic; /* Estilo de fuente */
+  text-align: center; 
+}
+
+#p1 {
+  text-align: left; /* Alineación de texto por defecto*/
+}
+#p2 {
+  text-align: center; /* Alineación de texto */
+}
+#p3 {
+  text-align: right; /* Alineación de texto */
+}
+#p4 {
+  text-align: justify; /* Alineación de texto */
+}

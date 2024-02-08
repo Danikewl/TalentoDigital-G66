@@ -1,0 +1,46 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+#Proxima-Charla {
+  background: #a4452c;
+  padding: 100px;
+  color: white;
+}
+
+#Proxima-Charla .wrapper {
+  width: 800px;
+  margin: auto;
+}
+
+.wrapper img {
+  width: 25%;
+}
+
+.wrapper .texto {
+  width: 70%;
+  margin-left: 4%;
+}
+
+.wrapper img,
+.texto {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* DEMO 2°PARTE=> ICONOS FONTAWESOME */
+
+footer {
+  font-family: "Open Sans", sans-serif;
+  text-align: center; /* Centrar textos hijos */
+  background: #000f08;
+  color: white;
+  padding: 50px;
+}
+
+i {
+  font-size: 50px; /* Asi para cambiar el tamaño de iconos */
+  margin: 10px;
+}
