@@ -7,6 +7,11 @@ link.innerHTML = `<button class=${clasePeligrosa}> Reiniciar </button>`; /* inne
 
 tituloTag.textContent = `Repaso JS`; /* textContent=> cambiamos el text area / el contenido de texto de la etiqueta */
 
+
+
+
+
+
 /* -----------------------CON IF */
 function calcularNumero(numero) {
   if (numero % 15 === 0) {
