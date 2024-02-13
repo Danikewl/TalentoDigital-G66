@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luis Fernando González">
+    <meta name="description" content="Prueba Final MOD2">
+
+    <title>Prueba Final Mod 2</title>
+    <!--links CSS-->
+    <link rel="icon" type="image/x-icon" href="./assets/imagenes/iconos/ico-prueba.png">
+    <link rel="stylesheet" href="./assets/estilos/css/bootstrap/bootstrap.min.css" type="text/css">
+    <link href="./assets/estilos/css/main.css" rel="stylesheet" type="text/css" /> 
+    <!--links Scripts-->
+    <script src="./assets/scripts/jQuery/jQuery 3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fe1956f1e0.js" crossorigin="anonymous"></script>
+  </head>
+<header>
+  <!--inicio navbar-->
+  <nav class="d-flex navbar navbar-expand-md navbar-light bg-light navbar-fixed-top" id="barraDeNavegacion">
+    <div class="col-6 logoViajesChile text-center">
+      <img src="./assets/imagenes/viajes.svg" alt="">  
+      <a class="navbar-brand">Viajes Chile</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBootstrap"
+        aria-controls="navbarBootstrap" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="col-6 collapse navbar-collapse" id="navbarBootstrap">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#carruselDeImagenes">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#quienesSomos">Quiénes Somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#destacados">Destacados</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+   <!--fin navbar-->
+</header>
+
+<body> 
+  <!-- inicio main-->
+  <main class="bg-dark">
+    <!--inicio sección carruselDeImagenes-->
+    <section id="carruselDeImagenes">
+      <!-- inicio carrusel de Bootstrap-->
+      <div id="carrusel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="./assets/imagenes/carousel1.jpg" alt="Imagen Llamas">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./assets/imagenes/carousel2.jpg" alt="Imagen Moais">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./assets/imagenes/carousel3.jpg" alt="Imagen Pingüino">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carrusel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carrusel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+      <!-- fin carrusel de Bootstrap-->
+    </section>
+    <!--fin sección carruselDeImagenes-->
+  
+    <!--inicio sección quienesSomos-->
+    <section class="d-none d-sm-block px-4" id="quienesSomos">
+      <h3 class="text-light">¿QUIÉNES SOMOS?</h3>
+      <div class="row">
+        <!--inicio card Bootstrap-->
+        <div class="card col-md-4">
+          <h2>
+            <i class="fa-solid fa-plane"></i>
+          </h2>
+          <div class="card-body">
+            <p class="card-text">
+              Los laborum pariatur qui ipsa voluptatibus ad magni earum qui sapiente galisum et dolor consequatur. At dolor eligendi sed nesciunt expedita aut maiores suscipit.
+              Qui earum temporibus ad quia tempora id excepturi alias in necessitatibus praesentium. Rem consequatur dolores ex corrupti repudiandae eos velit facilis. Aut Quis necessitatibus ea tenetur numquam qui minima sequi.Suscipit.
+            </p>
+          </div>         
+          <div class="alert alert-primary md-none" role="alert">
+            Este link no está disponible por el momento. Intenta más tarde
+          </div>
+        </div>
+        <!--fin card Bootstrap-->
+  
+        <!--inicio card Bootstrap-->
+        <div class="card col-md-4"> 
+          <h2 class="d-none">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </h2>
+          <div class="card-body">
+            <p class="card-text">
+              Los laborum pariatur qui ipsa voluptatibus ad magni earum qui sapiente galisum et dolor consequatur. At dolor eligendi sed nesciunt expedita aut maiores suscipit.
+              Qui earum temporibus ad quia tempora id excepturi alias in necessitatibus praesentium. Rem consequatur dolores ex corrupti repudiandae eos velit facilis. Aut Quis necessitatibus ea tenetur numquam qui minima sequi.Suscipit.
+            </p>
+          </div>
+          <h2 class="d-none d-md-block">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </h2>         
+          <div class="alert alert-primary md-none" role="alert">
+            Este link no está disponible por el momento. Intenta más tarde
+          </div>
+        </div>
+        <!--fin card Bootstrap-->
+  
+        <!--inicio card Bootstrap-->
+        <div class="card col-md-4">
+          <h2>
+            <i class="fa-solid fa-staff-snake"></i>
+          </h2>
+          <div class="card-body">
+            <p class="card-text">
+              Los laborum pariatur qui ipsa voluptatibus ad magni earum qui sapiente galisum et dolor consequatur. At dolor eligendi sed nesciunt expedita aut maiores suscipit.
+              Qui earum temporibus ad quia tempora id excepturi alias in necessitatibus praesentium. Rem consequatur dolores ex corrupti repudiandae eos velit facilis. Aut Quis necessitatibus ea tenetur numquam qui minima sequi.Suscipit.
+            </p>
+          </div>         
+          <div class="alert alert-primary md-none" role="alert">
+            Este link no está disponible por el momento. Intenta más tarde
+          </div>
+        </div>
+        <!--fin card Bootstrap-->
+      </div>
+    </section>
+    <!--fin sección quienesSomos-->
+
+    <!--inicio sección destacados-->
+    <section class="px-4" id="destacados">
+      <h3 class="text-light">DESTACADOS</h3>
+      <div class="row">
+        <!--inicio card Bootstrap-->
+        <div class="card col-12 col-sm-6 col-md-6 col-lg-3">
+          <img src="./assets/imagenes/card1.jpg" alt="card1">
+          <div class="card-body">
+            <h5 class="card-text">Lorem ipsum dolor sit amet</h5>
+            <p class="card-text">
+              Los laborum pariatur qui ipsa voluptatibus ad magni earum qui sapiente galisum et dolor consequatur. At dolor eligendi sed nesciunt expedita aut maiores suscipit.
+            </p>
+            <br/>
+          </div>
+        </div>
+        <!--fin card Bootstrap-->
+  
+        <!--inicio card Bootstrap-->
+        <div class="card col-12 col-sm-6 col-md-6 col-lg-3">
+          <img src="./assets/imagenes/card2.jpg" alt="card2">
+          <div class="card-body">
+            <h5 class="card-text">Consectetur adipisicing elit</h5>
+            <p class="card-text">
+              Los laborum pariatur qui ipsa voluptatibus ad magni earum qui sapiente galisum et dolor consequatur. At dolor eligendi sed nesciunt expedita aut maiores suscipit.
+            </p>
+            <br/>
+          </div>
+        </div>
+        <!--fin card Bootstrap-->
+  
+        <!--inicio card Bootstrap-->
+        <div class="card col-12 col-sm-6 col-md-6 col-lg-3">
+          <img src="./assets/imagenes/card3.jpg" alt="card3">
+          <div class="card-body">
+            <h5 class="card-text">Sed do eiusmod tempor incididunt ut labore</h5>
+            <p class="card-text">
+              Los laborum pariatur qui ipsa voluptatibus ad magni earum qui sapiente galisum et dolor consequatur. At dolor eligendi sed nesciunt expedita aut maiores suscipit.
+            </p>
+          </div>
+        </div>
+        <!--fin card Bootstrap-->
+
+        <!--inicio card Bootstrap-->
+        <div class="card col-12 col-sm-6 col-md-6 col-lg-3">
+          <img src="./assets/imagenes/card4.jpg" alt="card4">
+          <div class="card-body">
+            <h5 class="card-text">Ut enim mimim veniam</h5>
+            <p class="card-text">
+              Los laborum pariatur qui ipsa voluptatibus ad magni earum qui sapiente galisum et dolor consequatur. At dolor eligendi sed nesciunt expedita aut maiores suscipit.
+            </p>
+            <br/>
+          </div>
+        </div>
+        <!--fin card Bootstrap-->
+      </div>
+    </section>
+    <!--fin sección destacados-->
+  
+    <!--inicio sección contacto-->
+    <section id="contacto">
+      <h3 class="text-light">CONTACTO</h3>
+      <!--inicio formulario Bootstrap-->
+      <form onsubmit="return false;">
+        <div class="form-group">
+          <label for="txtNombre">Nombre</label>
+          <input type="text" class="form-control" id="txtNombre">
+        </div>
+        <div class="form-group">
+          <label for="txtAsunto">Asunto</label>
+          <input type="text" class="form-control" id="txtAsunto">
+        </div>
+        <div class="form-group">
+          <label for="btnSubmit">Mensaje</label>
+          <textarea class="w-100" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+          <button id="btnSubmit" type="submit" class="btn" data-toggle="modal" data-target="#modalBootstrap"
+            title="Contáctate con nosotros">Enviar</button>
+        </div>
+        </form>
+        <!--fin formulario Bootstrap-->
+
+        <!-- inicio ModalBootstrap -->
+        <div class="modal" id="modalBootstrap" tabindex="-1" role="dialog" aria-labelledby="modalBootstrap" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Confirmación del formulario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Hemos tomado tus datos ingresados. Los quieres enviar ?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- fin ModalBootstrap -->
+        </section>
+    <!--fin sección contacto-->  
+  </main>
+  <!-- fin main-->
+
+  <!-- inicio footer-->
+  <footer class="row">
+    <h3 class="col-6 text-center" >VIAJES CHILE</h3>
+    <div class="col-6 invert-color text-center">
+      <a href="https://github.com/" id="linkGithub" target="_blank" data-toggle="tooltip" data-bs-placement="top" title="Github">
+        <i class="fa-brands fa-square-github"></i>
+        <!--inicio footerTooltip-->
+      <div class="d-none">Github</div>
+      </a>      
+      <a href="https://linkedin.com/" id="linkLinkedin"  target="_blank" data-toggle="tooltip" data-bs-placement="top" title="Linkedin">
+        <i class="fa-brands fa-linkedin"></i>
+         <!--inicio footerTooltip-->
+      <div class="d-none">Linkedin</div>
+      </a>     
+      <a href="https://twitter.com/" id="linkTwitter"  target="_blank" data-toggle="tooltip" data-bs-placement="top" title="Twitter">
+        <i class="fa-brands fa-x-twitter"></i>
+          <!--inicio footerTooltip-->
+      <div class="d-none">Twitter</div>
+      </a>    
+      <a href="https://facebook.com/" id="linkFacebook"  target="_blank" data-toggle="tooltip" data-bs-placement="top" title="Facebook">
+        <i class="fa-brands fa-square-facebook"></i>
+          <!--inicio footerTooltip-->
+      <div class="d-none">Facebook</div>
+      </a>    
+    </div>
+  </footer>
+  <!-- fin footer-->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+   <script src="./assets/scripts/navBar.js"></script>
+   <script src="./assets/scripts/iconosSeccionQuienesSomos.js"></script>
+   <script src="./assets/scripts/iconosLinksARedesSociales.js"></script>
+   <script src="./assets/scripts/modalContacto.js"></script>
+   <script src="./assets/scripts/footer.js"></script>
+   <script src="./assets/scripts/bootstrapTooltip.js"></script>
+   <script src="./assets/scripts/main.js"></script>
+</body>
+</html>
