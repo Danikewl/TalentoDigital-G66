@@ -12,3 +12,7 @@ miBtn.addEventListener("click", function () {
     resultado.innerHTML = "Estas buscando: " + inputBuscador.value;
   }
 });
+
+/* SINTAXIS BÁSICA=>
+etiqueta.addEventListener("evento", function(){})
+*/
