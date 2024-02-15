@@ -35,3 +35,25 @@ for (let i = 0; i < 3; i++) {
     console.log(i, j);
   }
 }
+
+/* ----------FACTORIAL-------------------- */
+/* Es el producto de todos los números enteros positivos desde el 1 hasta n. Siendo n un número (en este caso) puesto por el usuario. 
+Ej: Si es 5, hay que multiplicar por todos los números enteros anteriores hasta el 1
+*/
+
+let num = 3;
+
+//i = 1 2 3
+//        ↑
+//j = 1 2 3 4
+//          ↑
+//res= 1
+
+for (let i = 1; i <= num; i++) {
+  let res = 1; //1*1=1 1*2=2 2*3=6
+
+  for (let j = 1; j <= i; j++) {
+    res = res * j;
+  }
+  console.log(`El factorial de ${i} es ${res}`);
+}
