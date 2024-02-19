@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!---------------->
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Tipo: a  , * ,   -->
+    <!-- Clase: .ejemplo , .claseQueQUiero  ("a:not(.ejemplo)") -->
+    <!-- id:  #segundo-link -->
+    <!-- Posesión de un atributo: [href] -->
+    <!-- Value de un atributo: [href:'index.html'] -->
+    <!-- Indice:  a:eq(1)  ,  ("a").not("eq:0") -->
+    <!-- Pseudo estado -->
+    <a href="index.html"></a>
+    <a id="segundo-link"></a>
+    <a class="ejemplo"></a>
+    <a class="ejemplo" href="./noConflict.html"></a>
+    <span class="ejemplo"></span>
+
+    <script>
+      $(function () {
+        $(".ejemplo");
+      });
+    </script>
+  </body>
+</html>

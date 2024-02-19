@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!---------------->
+    <title>Show-Hide</title>
+  </head>
+  <body>
+    <p id="miParrafo">Este es un parrafo hecho desde html con etiqueta p.</p>
+    <script>
+      $(function () {
+        let miParrafo = $("#miParrafo");
+        $("#miParrafo").hide();
+        miParrafo.show();
+      });
+    </script>
+  </body>
+</html>

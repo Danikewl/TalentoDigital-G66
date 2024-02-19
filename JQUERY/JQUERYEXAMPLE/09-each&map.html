@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!---------------->
+    <title>Show-Hide</title>
+  </head>
+  <body>
+    <!-- <p id="miParrafo">soy cambiante</p>
+    <button id="botonAccion">CLICK AQUI</button> -->
+    <ul>
+      <li id="0">Laravel</li>
+      <li id="1">SpringBoot</li>
+      <li id="2">Django</li>
+    </ul>
+    <script>
+      /* recorrer elementos del dom con igual etiqueta */
+      $("li").each(function (indice, elemento) {
+        console.log(indice);
+        console.log(elemento);
+        console.log($(this).text());
+      });
+
+      /* Recorrer un array con each */
+      let lenguajes = ["PHP", "Java", "Ruby", "Kotlin", "C++"];
+      //   $.each(lenguajes, (indice, lenguaje) => {
+      //     console.log(indice, lenguaje);
+      //   });
+      /* Recorrer un array con map */
+
+      let dimensiones = $.map(lenguajes, (lenguaje) => {
+        console.log(lenguaje.length);
+      });
+
+      /*ejemplos de metodoso para verificar y "tipar un poco" ver mas con is.... */
+      console.log($.isArray(lenguajes));
+      console.log($.isArray(dimensiones));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!---------------->
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- CAMBIAR EL TEXTO DE UN ELEMENTO -->
+    <p id="parrafo">Texto del p</p>
+    <script>
+      // //ejemplo largo con ready//ready hace que la funcion se ejecute cuando se haya cargado el dom por completo
+      //   $(document).ready(function () {
+      //
+      //     $("#parrafo").text(
+      //       "cambiando con jQuery, esto reemplazaria al innerHTML"
+      //     );
+      //   });
+
+      //ready implicito
+      $(function () {
+        $("#parrafo").text(
+          "cambiando con jQuery, esto reemplazaria al innerHTML , en ejemplo corto"
+        );
+      });
+    </script>
+    <!------------------------------------>
+
+    <!-- JQUERY con archivo local -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!---------------->
+  </body>
+</html>

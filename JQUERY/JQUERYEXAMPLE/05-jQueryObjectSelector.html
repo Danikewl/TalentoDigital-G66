@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!---------------->
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="miCapa"></div>
+    <script>
+      var selectorCapa = $("#miCapa");
+      console.log(selectorCapa);
+      selectorCapa.html(
+        "<p style= 'color: blue';> PARRAFO AGREGADO CON .html()</p>"
+      ); //funcion que me permite incrustar HTML "el verdadero reemplazo del inner"
+
+      var miCapa = selectorCapa[0];
+      console.log(miCapa);
+    </script>
+  </body>
+</html>

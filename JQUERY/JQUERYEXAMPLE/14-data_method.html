@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!---------------->
+    <title>14 - Data Method</title>
+  </head>
+  <body>
+    <table id="tablaPaises"></table>
+    <script>
+      const $tablaPaises = $("#tablaPaises");
+
+      let paises = [
+        {
+          id: 1,
+          nombre: "Argentina",
+          sigla: "ARG",
+        },
+        {
+          id: 2,
+          nombre: "Chile",
+          sigla: "Chi",
+        },
+        {
+          id: 3,
+          nombre: "Colombia",
+          sigla: "Col",
+        },
+      ];
+
+      const cargarTabla = () => {
+        let tabla = "";
+        $.each(paises, (indice, pais) => {
+          //   console.log(pais);
+          tabla += `<tr>`;
+          tabla += `<td>${pais.nombre}</td>`;
+          tabla += `<td>${pais.sigla}</td>`;
+          tabla += `<td><button id='${pais.id}' data-pais='${JSON.stringify(
+            pais
+          )}' class="verId">Ver id</button></td>`;
+          tabla += `</tr>`;
+        });
+        $tablaPaises.html(tabla);
+      };
+
+      /* Evento click en boton ver id */
+      /* Metodo data -  usa luego del guión la propiedad que llamaremos con el metodo data */
+      $(document).on("click", ".verId", function (e) {
+        console.log($(this)[0].id); //jquery OBject
+        let paisSeleccionado = $(this).data("pais");
+        console.log(paisSeleccionado);
+      });
+
+      /* Evento en tabla con un off para solo dar un click */
+      $($tablaPaises).on("click", $tablaPaises, function (e) {
+        console.log("click en la tabla");
+        console.log(this);
+        $(this).off("click");
+      });
+      $(document).ready(function ($) {
+        cargarTabla();
+      });
+    </script>
+  </body>
+</html>

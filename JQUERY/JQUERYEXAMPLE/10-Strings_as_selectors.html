@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!---------------->
+    <title>10</title>
+  </head>
+  <body>
+    <a href="" alt="" target="">AA</a>
+    <script>
+      let plantilla1 = (href, texto) => {
+        return $(
+          `<div><a href='${href}' alt='${texto}' id='${texto}' target="_blank">${texto}</a></div> `
+        );
+      };
+      $(document).ready(function () {
+        $("body").html(plantilla1("https://google.com", "Google html")); //con html
+        $("body").append(plantilla1("https://google.com", "Google 1")); //con append
+        $("body").append(plantilla1("https://google.com", "Google 2")); //con append
+        $("body").append(plantilla1("https://google.com", "Google 3")); //con append
+        $("body").append(plantilla1("https://google.com", "Google 4")); //con append
+
+        console.log("body");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!---------------->
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- CAMBIAR EL TEXTO DE UN ELEMENTO -->
+    <p id="parrafo">Texto del p sin modificar</p>
+    <script>
+      //   jQuery.noConflict(); //no conflict nos deja usar $ si fuera de otra libreria
+      var lauta = jQuery.noConflict(); // asigno el nuevo valor para llamar a jquery
+      lauta(function () {
+        lauta("#parrafo").text(
+          "Cambiando con jQuery, esto reemplazaria al innerHTML , en ejemplo corto"
+        );
+      });
+
+      /* tambien puedes usar  la palabra reservada jQuery por $ de manera antiva */
+    </script>
+    <!------------------------------------>
+
+    <!-- JQUERY con archivo local -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!---------------->
+  </body>
+</html>

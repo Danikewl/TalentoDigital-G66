@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!---------------->
+    <title>Show-Hide</title>
+  </head>
+  <body>
+    <p id="miParrafo">soy cambiante</p>
+    <button id="botonAccion">CLICK AQUI</button>
+    <script>
+      $(function () {
+        let estaOculto = false;
+        let miParrafo = $("#miParrafo");
+        let botonAccion = $("#botonAccion");
+
+        botonAccion.click(() => {
+          if (!estaOculto) {
+            estaOculto = true;
+            miParrafo.show();
+          } else {
+            estaOculto = false;
+            miParrafo.hide();
+          }
+
+          //   estaOculto = !estaOculto  // esta linea puede reemplazar linea 25 y 22
+        });
+      });
+    </script>
+  </body>
+</html>
