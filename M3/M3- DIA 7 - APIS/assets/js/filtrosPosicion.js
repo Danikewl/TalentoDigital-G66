@@ -5,5 +5,5 @@ console.log(todasLasTD);
 
 $('td:gt(5)').css('backgroundColor','blue');
 $('td:lt(3)').css('backgroundColor','yellow');
-$('tr:first').css('color','red');
+$('td:first').css('color','red');
 $('td:eq(5)').css('color','red');
