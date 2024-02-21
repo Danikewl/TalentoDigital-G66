@@ -30,9 +30,12 @@ $.ajax({
     let datosHistoricos = data.serie;
 
     datosHistoricos.forEach((dato) =>
-      arrayDataPoints.push({ label: dato.fecha, y: dato.valor })
+      arrayDataPoints.push({
+        label: dato.fecha.split("T")[0].split("-").reverse().join("/"),
+        y: dato.valor,
+      })
     ); // pushear al arrayDataPoints, el objeto formateado tal cual me lo pide ChartJS
-    
+
     $("#chartContainer").CanvasJSChart(opciones); //Renderizo el gráfico
   }, //=> Si la petición se cumple correctamente yo renderizo un gráfico
 
