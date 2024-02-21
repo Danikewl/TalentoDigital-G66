@@ -1,4 +1,4 @@
-// $("#titulo").parpadea();
+$("#titulo").parpadea();
 
 $(".parpadear").parpadea();
 
