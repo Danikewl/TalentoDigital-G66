@@ -1,0 +1,22 @@
+{
+  "name": "fullstack-entorno",
+  "version": "1.0.0",
+  "description": "- inicializo mi gestor de paquetes npm\r - se crea el archivo gestor => package.json",
+  "main": "index.js",
+  "scripts": {
+    "for": "node ./src/for-anidados.js",
+    "rest": "node ./src/rest-spread-objetos.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.23.9"
+  },
+  "dependencies": {
+    "core-js": "^3.36.0"
+  }
+}
