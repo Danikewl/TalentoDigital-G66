@@ -19,20 +19,22 @@ moduloPrueba.incrementaContador(); //3
 moduloPrueba.incrementaContador(); //4
 moduloPrueba.reseteoContador(); //
 
+const moduloDesafio = (() => {
+  let variable = "Algo";
+  const funcionPrivada = (id, url) =>
+    console.log(
+      "Tendrá la logica que necesiten con los parametros correspondientes"
+    );
+  const funcionPrivada2 = (id, url) =>
+    console.log(
+      "Tendrá la logica que necesiten con los parametros correspondientes"
+    );
 
-const moduloDesafio = (()=>{
-  let variable = "Algo"
-  const funcionPrivada = (id,url)=> console.log("Tendrá la logica que necesiten con los parametros correspondientes");
-  const funcionPrivada2 = (id,url)=> console.log("Tendrá la logica que necesiten con los parametros correspondientes");
+  return {
+    funcionPublica: (id, url) => {
+      funcionPrivada(id, url);
+    },
+  };
+})();
 
-    return{
-      funcionPublica:(id,url)=>{
-        funcionPrivada(id,url)
-      }
-    }
-})()
-
-
-
-moduloDesafio.funcionPublica("asdj234", "https://...")
-
+moduloDesafio.funcionPublica("asdj234", "https://...");
