@@ -18,3 +18,4 @@
 # race
 # Promise.all()
 # Promise.race()
+# Try/Catch
