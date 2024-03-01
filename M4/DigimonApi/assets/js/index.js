@@ -1,6 +1,8 @@
-import { getData } from "./controllers/controllers.js";
+import { getData, getDigimonDetail } from "./controllers/controllers.js";
 
 const cardSection = document.getElementById("card-section");
+const modalTitle = document.getElementById("modal-title");
+const modalBody = document.getElementById("modal-body");
 const previousPageBtn = document.getElementById("previous-page");
 const nextPageBtn = document.getElementById("next-page");
 /* PAGINACIÓN */
@@ -18,20 +20,48 @@ const showCards = async (url) => {
   nextPage = pageable.nextPage;
   prevPage = pageable.previousPage;
 
+  let idBotones = []; //1,2,3,4,6,5
   let digimonCards = "";
-  digimons.forEach(
-    (digimon) =>
-      (digimonCards += `      
+  digimons.forEach((digimon) => {
+    idBotones.push(digimon.id);
+    digimonCards += `      
                         <figure class="effect-honey">
                             <img src=${digimon.image} alt="img04" class="w-100"/>
                             <figcaption>
                                 <h2> ${digimon.name} <i>${digimon.id}</i></h2>
-                                <span class="miCard" id=${digimon.id} href=${digimon.href}>Ver detalle</span>
+                                <span  id=${digimon.id} data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="miCard" href=${digimon.href}>Ver detalle</span>
                             </figcaption>			
                          </figure>
-      `)
-  );
+      `;
+  });
   cardSection.innerHTML = digimonCards;
+
+  idBotones.forEach((id) => {
+    let card = document.getElementById(id);
+    card.addEventListener("click", async () => {
+      let digimonDetail = await getDigimonDetail(id);
+      modalTitle.innerHTML = ` <span class="text-black fw-bold">${digimonDetail.name}</span>`;
+      modalBody.innerHTML = `   <div class="d-flex-column justify-content-center">
+                                  <span class="text-black fw-bold">First apparition :
+                                  ${digimonDetail.releaseDate}</span>
+                                  <p class="text-black p-4">${
+                                    digimonDetail.descriptions[0].language ===
+                                    "en_us"
+                                      ? digimonDetail.descriptions[0]
+                                          .description
+                                      : digimonDetail.descriptions[1]
+                                          .description
+                                  }</p>
+                                  <img src=${digimonDetail.images[0].href}/>
+                                </div>
+                                
+                                
+                              
+
+      
+      `;
+    });
+  });
 };
 
 previousPageBtn.addEventListener("click", () => {
@@ -45,8 +75,3 @@ nextPageBtn.addEventListener("click", () => {
 
 /* Primer Renderizado */
 showCards();
-
-let misCards = document.getElementsByClassName("miCard")
-
-misCards.addEventListener("click", (event)=>{console.log("click", event);})
-
