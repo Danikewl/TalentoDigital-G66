@@ -1,6 +1,6 @@
 let getPokemons = async () => {
-  let data = await fetch("htts://pokeapi.co/api/v2/pokemon/ditto");
   try {
+    let data = await fetch("https://pokeapi.co/api/v2/pokemon/pikachu");
     let pokemon = await data.json();
     console.log(pokemon.name);
     console.log("Excelente respuesta!");
