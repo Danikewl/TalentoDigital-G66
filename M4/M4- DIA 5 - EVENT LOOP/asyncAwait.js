@@ -14,7 +14,6 @@ async function getSuperHero(id) {
     };
 
     return miSuperHeroe;
-    
   } catch (error) {
     console.log(error);
   }
