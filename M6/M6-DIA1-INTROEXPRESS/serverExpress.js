@@ -11,8 +11,12 @@ app.get("/", (req, res) => {
 });
 
 app.get("/toctoc", (req, res) => {
-  console.log("Estas ingresando a la ruta toc toc");
-  res.send("¿WHO IS?");
+  try {
+    console.log("Estas ingresando a la ruta toc toc");
+    res.status(200).send("¿WHO IS?");
+  } catch (error) {
+    res.status(500).send("hay un error");
+  }
 });
 
 app.get("/toctoc/:nombre", (req, res) => {
@@ -33,6 +37,25 @@ app.get("/super/:idSuperHero", (req, res) => {
       `El superheroe que has seleccionado es ${superHeroes[idSuperHero - 1]}`
     );
   }
+});
+
+app.get("/azar/:numero", (req, res) => {
+  const numeroRandom = Math.floor(Math.random() * (4 - 1)) + 1; //devuelve un number
+
+  const numero = Number(req.params.numero); // Params siempre devolverá un string para ser tratado como number, debo cambiar su tipo de dato con el método Number()
+
+  console.log("numero Random =>", numeroRandom);
+  console.log("numero Elegido =>", numero);
+
+  numero === numeroRandom
+    ? res.send("Hoy estás de suerte ;) 🍀")
+    : res.send("Buena suerte para la próxima... 🧅");
+});
+
+app.get("/redireccionar/:pagina", function (req, res) {
+  const { pagina } = req.params;
+
+  res.redirect(`https://www.${pagina}.com`);
 });
 
 /* RUTA GENÉRICA */
