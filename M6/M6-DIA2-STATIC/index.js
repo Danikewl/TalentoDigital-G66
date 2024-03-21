@@ -17,7 +17,7 @@ app.get("/login", (req, res) => {
 });
 
 app.get("/info", (req, res) => {
-  res.json({ info: ["info"] });
+  res.json({ info: ["pokemon1", "pokemon2"] });
 });
 
 /* Levantar el servidor => método .listen*/
