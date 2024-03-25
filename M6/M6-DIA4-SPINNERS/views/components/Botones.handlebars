@@ -1,0 +1,17 @@
+{{#each colores}}
+  {{!  [
+      "primary", <===this
+      "secondary",
+      "success",
+      "danger",
+      "warning",
+      "info",
+      "light",
+      "dark",
+    ] }}
+  <a href="/{{this}}">
+    <button class="btn btn-{{this}}">
+      {{this}}
+    </button>
+  </a>
+{{/each}}

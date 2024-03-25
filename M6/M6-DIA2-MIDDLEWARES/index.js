@@ -20,7 +20,6 @@ app.use("/tiempo", (req, res, next) => {
   );
 
   let Authorization = req.header("Authorization");
-
   let loggedUser = users.find((user) => user.id == Authorization);
 
   if (loggedUser) {

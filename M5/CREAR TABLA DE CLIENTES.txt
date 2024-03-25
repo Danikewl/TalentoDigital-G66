@@ -1,0 +1,9 @@
+create table clientes(
+nombre varchar(30),
+apellido varchar(30)
+);
+
+insert into clientes (nombre, apellido) values ('Valor1','Valor2');
+
+
+select * from clientes;

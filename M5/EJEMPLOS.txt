@@ -1,0 +1,33 @@
+-CREAR UNA TABLA
+
+create table MOCK_PRODUCTS (
+	id INT,
+	product_name VARCHAR(50),
+	price INT,
+	stock VARCHAR(50)
+);
+
+
+-INSERTAR VALORES A UNA TABLA
+
+insert into MOCK_PRODUCTS (id, product_name, price, stock) values (1, 'Liners - Baking Cups', 298, true);
+insert into MOCK_PRODUCTS (id, product_name, price, stock) values (2, 'Veal - Sweetbread', 6552, false);
+
+-SELECCIONAR VALORES DE UNA TABLA CON CONDICIONES UTILIZANDO LA PALABRA WHERE/ OR /AND
+
+select * from MOCK_PRODUCTS where id = 1 
+select * from MOCK_PRODUCTS where price >= 300 
+select * from MOCK_PRODUCTS where price >= 300 
+select * from MOCK_PRODUCTS where id = 5 or id = 15;
+select * from MOCK_PRODUCTS where id > 5 and id < 15;
+
+-FUNCTIONES MAX Y MIN
+
+select MIN(price) from MOCK_PRODUCTS
+select MAX(price) from MOCK_PRODUCTS
+
+
+-de la misma manera podemos utilizar SUM()  =>    y AVG()  => promedio
+
+select SUM(price) from MOCK_PRODUCTS
+select AVG(price) from MOCK_PRODUCTS 
