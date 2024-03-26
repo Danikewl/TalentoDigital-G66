@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./assets/js/main.js"></script>
+    <title>Mi repertorio</title>
+  </head>
+  <body>
+    <h1>MI REPERTORIO</h1>
+    <h2>Crear archivo</h2>
+    <form action="http://localhost:8080/crear">
+      Nombre del archivo:
+      <input name="nombre" />
+      <br />
+      Contenido:
+      <textarea name="contenido"></textarea>
+      <br />
+      <button>Crear</button>
+    </form>
+
+    <hr />
+    <h2>Leer archivo</h2>
+    <form action="http://localhost:8080/leer">
+      Nombre del archivo:
+      <input name="nombre" />
+      <br />
+      <button>Leer</button>
+    </form>
+    <hr />
+    <h2>Renombrar archivo</h2>
+    <form action="http://localhost:8080/renombrar">
+      Nombre del archivo que deseas cambiar:
+      <input name="nombreViejo" />
+      Nombre Nuevo para el archivo:
+      <input name="nombreNuevo" />
+      <br />
+      <button>Renombrar</button>
+    </form>
+    <hr />
+    <h2>Eliminar archivo</h2>
+    <form action="http://localhost:8080/eliminar">
+      Nombre del archivo:
+      <input name="nombre" />
+      <br />
+      <button>eliminar</button>
+    </form>
+    <hr />
+    <!-- EJEMPLO DESDE JS -->
+    <h2>BUSCAR TEMAS POR ARTISTA</h2>
+    <form>
+      Nombre del artista:
+      <input id="leer-input" name="nombre" />
+      <br />
+      <button id="leer-btn">Buscar</button>
+    </form>
+    <h3 id="artist-name"><!-- nombre del artista --></h3>
+    <section id="leer-result"><!-- canciones --></section>
+  </body>
+</html>
