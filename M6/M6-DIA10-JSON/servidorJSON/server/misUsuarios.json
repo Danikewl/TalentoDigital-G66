@@ -1,0 +1,28 @@
+{
+  "usuarios": [
+    {
+      "id": "78933449-eedb-47bc-af97-f9539bd92f5c",
+      "createdAt": "2024-04-04T16:27:29.358Z",
+      "name": "Carl",
+      "lastname": "Johnson",
+      "email": "latark@example.com",
+      "password": "1234"
+    },
+    {
+      "id": "d2131d85-310c-4078-876c-e0d6e7061269",
+      "createdAt": "2024-04-04T16:27:25.140Z",
+      "name": "Juan",
+      "lastname": "Johnson",
+      "email": "latark@example.com",
+      "password": "1234"
+    },
+    {
+      "id": "1d0c4408-e870-4129-a3d8-69ebf5abf841",
+      "createdAt": "2024-04-04T16:27:12.261Z",
+      "name": "Lautaro",
+      "lastname": "Johnson",
+      "email": "latark@example.com",
+      "password": "1234"
+    }
+  ]
+}
