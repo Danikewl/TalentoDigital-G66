@@ -1,5 +1,4 @@
 # 1
-
 Crear un proyecto nuevo en firebase
 `https://console.firebase.google.com/u/0/?hl=es`
 
@@ -35,5 +34,4 @@ ENLACE PRIMITIVO: `http://masashi-k.blogspot.fr/2013/06/sending-mail-with-gmail-
 Se genera el refresh token y lo pegamos en el lugar correspondiente de la configuración de nodemailer.
 
 # 10
-
 ENVIAR SPAM!

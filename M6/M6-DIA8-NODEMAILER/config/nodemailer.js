@@ -19,6 +19,7 @@ let transporter = nodemailer.createTransport({
 
 /* 
 OBJETO EJEMPLO
+
 let transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -29,13 +30,6 @@ let transporter = nodemailer.createTransport({
     refreshToken: "1/XXxXxsss-xxxXXXXXxXxx0XXXxxXXx0x00xxx" 
   },
 });
-
-
-
-
-
-
-
 
 */
 

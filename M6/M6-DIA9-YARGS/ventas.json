@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "categoria": "Smartphones",
+    "marca": "Samsung",
+    "modelo": "Galaxy S23 Ultra",
+    "precio": 120000,
+    "imagen": "https://www.samsung.com/us/smartphones/galaxy-s23-ultra/",
+    "especificaciones": {
+      "pantalla": "6.8 pulgadas AMOLED",
+      "procesador": "Snapdragon 8 Gen 2",
+      "memoriaRAM": "12 GB",
+      "almacenamiento": "512 GB",
+      "camarasTraseras": "108 MP + 12 MP + 10 MP + 10 MP",
+      "camaraFrontal": "40 MP"
+    }
+  },
+  {
+    "id": 2,
+    "categoria": "Laptops",
+    "marca": "Apple",
+    "modelo": "MacBook Air M2",
+    "precio": 100000,
+    "imagen": "https://www.apple.com/shop/buy-mac/macbook-air/13-inch-m2",
+    "especificaciones": {
+      "pantalla": "13.6 pulgadas Liquid Retina",
+      "procesador": "Apple M2",
+      "memoriaRAM": "8 GB",
+      "almacenamiento": "256 GB",
+      "bateria": "Hasta 18 horas"
+    }
+  },
+  {
+    "id": 3,
+    "categoria": "Smartwatches",
+    "marca": "Amazfit",
+    "modelo": "GTR 3 Pro",
+    "precio": 50000,
+    "imagen": "https://us.amazfit.com/products/amazfit-gtr-3-pro",
+    "especificaciones": {
+      "pantalla": "AMOLED de 1.43 pulgadas",
+      "bateria": "Hasta 12 días",
+      "sensores": "SpO2, frecuencia cardíaca, GPS",
+      "funciones": "Más de 150 modos deportivos"
+    }
+  },
+  {
+    "id": 4,
+    "categoria": "Tablets",
+    "marca": "Samsung",
+    "modelo": "Galaxy Tab S8 Ultra",
+    "precio": 90000,
+    "imagen": "https://www.samsung.com/us/tablets/galaxy-tab-s8/buy/",
+    "especificaciones": {
+      "pantalla": "14.6 pulgadas AMOLED",
+      "procesador": "Snapdragon 8 Gen 1",
+      "memoriaRAM": "12 GB",
+      "almacenamiento": "256 GB",
+      "bateria": "Hasta 17 horas"
+    }
+  },
+  {
+    "id": 5,
+    "categoria": "Audífonos",
+    "marca": "Sony",
+    "modelo": "WH-1000XM5",
+    "precio": 40000,
+    "imagen": "https://helpguide.sony.net/mdr/wh1000xm5/v1/en/index.html",
+    "especificaciones": {
+      "tipo": "In-ear",
+      "cancelacionDeRuido": "Sí",
+      "autonomia": "Hasta 30 horas",
+      "caracteristicas": "Sonido de alta fidelidad, conectividad Bluetooth 5.2"
+    }
+  }
+]

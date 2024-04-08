@@ -6,15 +6,32 @@ const { Pool } = pg;
 // };
 // const pool = new Pool(config);
 
-/* FORMA 2  */
+/* FORMA 2 =>EXTENDIDA */
+// const config = {
+//   user: "postgres",
+//   host: "localhost",
+//   database: "JEANS",
+//   password: "1234",
+//   port: 5432,
+//   max: 20 /* Máximo de conecciones */,
+//   min: 2 /* Mínimo de conecciones */,
+//   idleTimeoutMillis: 30000 /* Tiempo permitido de inactividad */,
+//   connectionTimeoutMillis: 2000 /* Tiempo de espera para conectarse */,
+//   ssl:true,  /* permite definir si la conexión a la base de datos soporta un protocolo de transporte encriptado.Default = false */
+// };
+// const pool = new Pool(config);
+
+/* FORMA 3  */
 const config = {
   user: "postgres",
   host: "localhost",
   database: "JEANS",
   password: "1234",
   port: 5432,
+  ssl: false,
 };
 const pool = new Pool(config);
+
 /* --------------------OBTENER FECHA------------------------------------------------ */
 
 const getDate = async () => {
@@ -33,10 +50,30 @@ const getClothes = async () => {
 // getClothes();
 
 /* --------------------CREAR ROPA------------------------------------------------ */
-const createClothes = async () => {
-  const result = await pool.query(`  INSERT INTO ropa(nombre,color,talla) 
-    VALUES ('jean con estampado','amarillo', 'S' ) RETURNING *    `);
-  console.log(result.rows);
+const createClothes = async (nombre, color, talla) => {
+  const text = `INSERT INTO ropa(nombre,color,talla) VALUES ($1, $2, $3)`;
+  const values = [nombre, color, talla];
+  const result = await pool.query(text, values);
 };
 
-createClothes();
+//  createClothes("remera","azul","XM");
+
+/* --------------------ELIMINAR ROPA------------------------------------------------ */
+const deleteClothes = async (talla) => {
+  const text = `DELETE FROM ropa WHERE  talla = $1`;
+  const values = [talla];
+  const result = await pool.query(text, values);
+  console.log(result);
+};
+
+//  deleteClothes("XS");
+
+/* --------------------EDITAR TALLA DE ROPA POR ID DE ROPA------------------------------------------------ */
+const editClothSizeById = async (tallaNueva, id) => {
+  const text = `UPDATE ropa SET talla = $1 WHERE id = $2 `;
+  const values = [tallaNueva, id];
+  const result = await pool.query(text, values);
+  console.log(result);
+};
+
+editClothSizeById("XXXXL", 3);
