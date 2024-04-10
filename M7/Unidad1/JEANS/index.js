@@ -43,20 +43,40 @@ const getDate = async () => {
 
 /* --------------------OBTENER ROPA------------------------------------------------ */
 const getClothes = async () => {
+  try {
+    const result = await pool.query("SELECT * FROM ropa");
+    console.log(result.rows);
+    return result.rows;
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
+};
+
+//  getClothes();
+/* --------------------OBTENER ROPA CON CURSOR------------------------------------------------ */
+const getClothesCursor = async () => {
   const result = await pool.query("SELECT * FROM ropa");
   console.log(result.rows);
 };
 
-// getClothes();
+// getClothesCursor();
 
 /* --------------------CREAR ROPA------------------------------------------------ */
 const createClothes = async (nombre, color, talla) => {
-  const text = `INSERT INTO ropa(nombre,color,talla) VALUES ($1, $2, $3)`;
-  const values = [nombre, color, talla];
-  const result = await pool.query(text, values);
+  try {
+    const text = `INSERT INTO ropa(nombre,color,talla) VALUES ($1, $2,$3)`;
+    const values = [nombre, color, talla];
+    const result = await pool.query(text, values);
+    console.log(result);
+    return result;
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
 };
 
-//  createClothes("remera","azul","XM");
+createClothes("remera", "azul", "SSSS");
 
 /* --------------------ELIMINAR ROPA------------------------------------------------ */
 const deleteClothes = async (talla) => {
@@ -76,4 +96,4 @@ const editClothSizeById = async (tallaNueva, id) => {
   console.log(result);
 };
 
-editClothSizeById("XXXXL", 3);
+// editClothSizeById("XXXXL", 3);

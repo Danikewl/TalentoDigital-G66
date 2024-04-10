@@ -1,0 +1,11 @@
+{
+    "createNewCloth": {
+      "text": "INSERT INTO ropa (nombre,color,talla) VALUES ($1,$2,$3)",
+      "values": ["remera", "celeste", "XL"]
+    },
+    "selectAllClothes": {
+      "text": "SELECT * FROM ropa",
+      "rowMode": "array"
+    }
+  }
+  
