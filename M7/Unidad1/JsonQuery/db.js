@@ -14,19 +14,17 @@ const config = {
 const pool = new Pool(config);
 
 const createCloth = async (nombre, color) => {
-  const text= "INSERT INTO ropa (nombre,color,talla) VALUES ($1,$2,$3)"
-  const values= ["remera", "celeste", "XL"]
-  const result = await pool.query(text, values);
+
+  const result = await pool.query(createRopa);
   return console.log(result);
 };
 
 export const getAllClothes = async () => {
-  const result = await pool.query({
-    text: "SELECT * FROM ropa",
-  });
+  const result = await pool.query(ropaQueries.selectAllClothes);
   return console.log(result);
 };
 
-
-
-
+let objeto = {
+  text: "SELECT * FROM ropa",
+  values: ["valores"],
+};
