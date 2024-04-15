@@ -23,6 +23,10 @@ const transactionExample = async () => {
       "UPDATE usuarios SET saldo = saldo + 10000 WHERE email = 'yuki_whsdfsdfsdfsdbrey@aol.com' RETURNING *";
     const clienteAcreditado = await pool.query(acreditar);
 
+
+
+ 
+
     if (!clienteAcreditado.rowCount || !clienteDescontado.rowCount) {
       const rollback = "ROLLBACK";
       await pool.query(rollback);
@@ -34,8 +38,10 @@ const transactionExample = async () => {
         receptor: clienteAcreditado.rows[0],
       });
     } else {
+      pool.query("INSERT INTO transferencias, saldo=10000, comprador:cuentaComprador , vendedor: cuentaVEndedor  ")
+
       console.log({
-        status: "Error",
+        status: "Ok",
         message: "Operación realizada con éxito.",
         code: 200,
         emisor: clienteDescontado.rows[0],
