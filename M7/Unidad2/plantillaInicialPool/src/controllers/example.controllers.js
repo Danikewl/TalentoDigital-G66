@@ -47,7 +47,6 @@ const createExample = async (req, res) => {
 };
 
 /* PATCH O PUT => EDITAR */
-
 const editExample = async (req, res) => {
   try {
     const { newTitle, oldTitle } = req.body;
