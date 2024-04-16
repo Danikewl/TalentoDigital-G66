@@ -32,7 +32,7 @@ const getExamplesById = async (req, res) => {
 /* POST => CREAR */
 const createExample = async (req, res) => {
   try {
-    const { title } = req.body;
+    const { title } = req.query;
 
     const values = [title];
     let queryExample = "INSERT INTO algo (title) VALUES ($1) RETURNING *";
