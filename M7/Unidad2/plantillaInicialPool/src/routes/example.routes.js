@@ -1,27 +1,27 @@
 const { Router } = require("express");
 const router = Router(); //localhost:3000/category
 const { pool } = require("../db");
+const {
+  getExamples,
+  createExample,
+  editExample,
+  deleteExample,
+  getExamplesById,
+} = require("../controllers/example.controllers");
 
-router.get("/", async (req, res) => {
-  try {
-    let example = await pool.query("SELECT * FROM algo;")
+/* GET => CONSULTA */
+router.get("/", getExamples);
 
-    res.status(200).json(example);
-  } catch (error) {
-    console.error(error);
-    res.status(400).send("Error buscando los productos");
-  }
-});
+/* GET BY TITLE => CONSULTA */
+router.get("/:title", getExamplesById);
 
-router.post("/", async (req, res) => {
-  try {
-    let example = await pool.query("INSERT INTO Examples (title) VALUES ('TITULO PG EJEMPLO') ")
+/* POST => CREAR */
+router.post("/", createExample);
 
-    res.status(200).json(example);
-  } catch (error) {
-    console.error(error);
-    res.status(400).send("Error buscando los productos");
-  }
-});
+/* PATCH O PUT => EDITAR */
+router.put("/", editExample);
+
+/* DELETE => ELIMINAR */
+router.delete("/:title", deleteExample);
 
 module.exports = router;

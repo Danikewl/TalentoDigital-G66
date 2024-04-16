@@ -7,7 +7,9 @@ router.get("/", (req, res) => {
   res.send("GET DE EJEMPLO A /");
 });
 
+
 /*definimos los endpoints en secciones */
 router.use("/example", exampleRoutes);
+
 
 module.exports = router;
