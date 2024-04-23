@@ -8,7 +8,7 @@ const axios = require("axios");
 app.use(express.json());
 
 app.listen(3000, () => {
-  console.log("servidor levantado");
+  console.log("servidor levantado en 3000");
 });
 
 app.post("/nuevoUsuario", async (req, res) => {
@@ -49,7 +49,7 @@ app.get("/robarApi", async (req, res) => {
 
     fs.writeFileSync(`${fileName}.json`, data);
 
-    res.json("Usuario almacenado con éxito");
+    res.json("JSON almacenado con éxito");
   } catch (error) {
     res.status(500).json(error);
   }

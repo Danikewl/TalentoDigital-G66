@@ -115,6 +115,7 @@
   });
 
   async function getPosts() {
+  console.log("ESTOY BUSCANDO LOS POSTS PORQUE SE EJECUTO LA FUNCION");
     const { data } = await axios.get(`${URL_BASE}/posts`);
     $(".posts").html("");
     $.each(data, (i, u) => {
