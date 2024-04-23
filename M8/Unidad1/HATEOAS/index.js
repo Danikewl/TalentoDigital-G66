@@ -66,9 +66,9 @@ app.get("/api/V1/guitarras/:id", async (req, res) => {
 /* GET V2 */
 app.get("/api/V2/guitarras", async (req, res) => {
   try {
-    let formatedGuitars = HATEOASV2();
-    let response = { guitarras: formatedGuitars, count: guitarras.length };
-    res.status(200).json(response);
+    let formatedGuitars = HATEOASV2();//=> [array de guitarras]
+    let responseBonita = { guitarras: formatedGuitars, count: guitarras.length, status:"OK" };
+    res.status(200).json(responseBonita);
   } catch (error) {
     res
       .status(500)

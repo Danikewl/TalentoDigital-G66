@@ -1,0 +1,1 @@
+El HATEOAS es devolver una respuesta indexada ó un error bien formado desde tu api hacia el cliente.
