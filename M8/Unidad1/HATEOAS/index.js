@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 /* CONTROLADORES */
-const HATEOASV1 = () => {
+const getGuitarsV1 = () => {
   const formatedResponse = guitarras.map((guitar) => {
     return {
       name: guitar.name,
@@ -14,7 +14,7 @@ const HATEOASV1 = () => {
   return formatedResponse;
 };
 
-const HATEOASV2 = () => {
+const getGuitarsV2 = () => {
   const formatedResponse = guitarras.map((guitar) => {
     return {
       guitar: guitar.name,
@@ -43,9 +43,14 @@ app.use(express.static("public"));
 /* GET V1 */
 app.get("/api/V1/guitarras", async (req, res) => {
   try {
-    let formatedGuitars = HATEOASV1();
-    let response = { guitarras: formatedGuitars, count: guitarras.length };
-    res.status(200).json(response);
+    let formatedGuitars = getGuitarsV1();
+    let responseBonita = {
+      guitarras: formatedGuitars,
+      count: guitarras.length,
+      status: "OK",
+      api_version: "V2",
+    }; //=> HATEOAS
+    res.status(200).json(responseBonita);
   } catch (error) {
     res
       .status(500)
@@ -66,8 +71,13 @@ app.get("/api/V1/guitarras/:id", async (req, res) => {
 /* GET V2 */
 app.get("/api/V2/guitarras", async (req, res) => {
   try {
-    let formatedGuitars = HATEOASV2();//=> [array de guitarras]
-    let responseBonita = { guitarras: formatedGuitars, count: guitarras.length, status:"OK" };
+    let formatedGuitars = getGuitarsV2(); //=> [array de guitarras]
+    let responseBonita = {
+      guitarras: formatedGuitars,
+      count: guitarras.length,
+      status: "OK",
+      api_version: "V2",
+    }; //=> HATEOAS
     res.status(200).json(responseBonita);
   } catch (error) {
     res
